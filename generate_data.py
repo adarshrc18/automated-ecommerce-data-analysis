@@ -5,17 +5,12 @@ from sqlalchemy import create_engine
 
 print("Starting MySQL data generation...")
 
-# -----------------------
 # Configuration
-# -----------------------
 USERNAME = "root"
 PASSWORD = "YOUR_PASSWORD"   # <-- Put your MySQL password here
 HOST = "localhost"
 DATABASE = "ecommerce_db"
-
-# -----------------------
 # Create MySQL Engine (SAFE METHOD)
-# -----------------------
 engine = create_engine(
     f"mysql+pymysql://{USERNAME}@{HOST}/{DATABASE}",
     connect_args={"password":"mysqladarshrc18"}
