@@ -21,9 +21,7 @@ engine = create_engine(
     connect_args={"password":"mysqladarshrc18"}
 )
 
-# -----------------------
 # Generate Fake Data
-# -----------------------
 fake = Faker()
 num_records = 300
 
@@ -49,9 +47,7 @@ for _ in range(num_records):
 
 df = pd.DataFrame(data)
 
-# -----------------------
 # Insert into MySQL
-# -----------------------
 df.to_sql(
     name="sales_data",
     con=engine,
